@@ -29,7 +29,8 @@ body {
 body {
   font-family: var(--base-font-family);
   font-weight: 300;
-  background-color: var(--light-gray);
+  background-color: #ffffff
+  ;
 }
 
 ul,
@@ -197,12 +198,14 @@ hr {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  background-color: #171616;
 }
 
 .product-box_data h2 {
   font-size: 2.4em;
   font-weight: 300;
   margin: 0;
+  color: #00bf63;
 }
 
 .product-box_data span {
@@ -215,7 +218,7 @@ hr {
 .product-box_data p {
   font-size: 1.5em;
   width: 100%;
-  color: var(--gray);
+  color: #ffffff;
   margin: 0;
   height: 0;
   transition: 300ms;
