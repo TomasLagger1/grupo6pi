@@ -110,6 +110,13 @@ hr {
   cursor: pointer;
 }
 
+.linea-divisora {
+  border: none;
+  height: 2px;
+  background-color: #00bf63;
+  margin: 20px 0;
+}
+
 
 /*====== Main Navbar ======*/
 .btn-toggle-navbar {
