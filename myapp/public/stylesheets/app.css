@@ -383,9 +383,9 @@ hr {
 }
 
 .buy-now-button {
-  background-color: var(--light-blue);
+  background-color: #00bf63;
   font-size: 1.6em;
-  color: #ffffff;
+  color: #171616;
   padding: 15px;
   border-radius: 8px;
   border: none;
@@ -484,7 +484,7 @@ textarea.form-input {
 }
 
 .btn{
-  background-color: #1259c3;
+  background-color: #00bf63;
   padding: 10px 20px;
   border-radius: 4px;
   color: #fff;
