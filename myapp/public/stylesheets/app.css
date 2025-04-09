@@ -273,19 +273,19 @@ hr {
 }
 
 .footer-data i {
-  color: var(--light-blue);
+  color: #00bf63;
   font-size: 3.5em;
 }
 
 .footer-data h2 {
   color: #ffffff;
-  font-size: 2.4em;
+  font-size: 2em;
   font-weight: 400;
 }
 
 .footer-data p {
   color: #ffffff;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 300;
 }
 
