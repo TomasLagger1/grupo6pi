@@ -263,7 +263,7 @@ hr {
 
 /*====== Footer ======*/
 .main-footer {
-  background-color: #ffffff;
+  background-color: #171616;
   padding: 20px 0;
   margin-top: 80px;
 }
@@ -278,13 +278,13 @@ hr {
 }
 
 .footer-data h2 {
-  color: var(--gray);
+  color: #ffffff;
   font-size: 2.4em;
   font-weight: 400;
 }
 
 .footer-data p {
-  color: var(--gray);
+  color: #ffffff;
   font-size: 1.5em;
   font-weight: 300;
 }
@@ -479,7 +479,6 @@ textarea.form-input {
   border-radius: 4px;
   color: #fff;
 }
-
 
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {
