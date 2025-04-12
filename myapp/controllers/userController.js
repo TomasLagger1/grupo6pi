@@ -4,9 +4,6 @@ const userController = {
     login: function (req, res) {
         return res.render('login')
     },
-    profile: function (req, res) {
-        return res.render('profile')
-    },
     perfil: function (req, res) {
         const nombre = db.usuario.usuario
         const pfp = db.usuario.foto
