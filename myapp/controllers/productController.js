@@ -2,7 +2,7 @@ const db = require('../db/datos')
 
 const productController = {
     product: function (req, res) {
-        return res.render('product')
+        return res.render('product', {productos: db.productos})
     },
     productAdd: function (req, res) {
         const nombre = db.usuario.usuario
