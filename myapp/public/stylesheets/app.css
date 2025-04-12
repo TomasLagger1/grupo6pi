@@ -10,13 +10,15 @@
   --gray: #666666;
   --light-gray: #ebebeb;
   --green: #39b54a;
-  --base-font-family: "Bangers", system-ui;
+  --base-font-family: "IBM Plex Sans", sans-serif;
+  --secondary-font-family: "Inter", sans-serif;
 }
 
 
 /*====== Basics ======*/
 * {
   box-sizing: border-box;
+  font-family: var(--secondary-font-family);
 }
 
 html,
