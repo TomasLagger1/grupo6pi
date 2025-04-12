@@ -5,7 +5,7 @@ const db = {
         constraseña: "brian1234",
         nacimiento: "07/12/2000",
         documento: 41082865,
-        foto: ""
+        foto: "/images/users/foto-perfil-b.webp"
     },
 
     productos: [
