@@ -208,8 +208,7 @@ hr {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  border: 3px solid;
-  border-color: #00bf63;
+  border: 3px solid #00bf63;
 }
 
 .product-box_data h2 {
