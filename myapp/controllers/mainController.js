@@ -7,7 +7,7 @@ const mainController = {
     },
     searchResults: function (req, res) {
         const proddd = db.productos
-        return res.render('index', {proddd})
+        return res.render('searchResults', {proddd})
     },
 }
 
