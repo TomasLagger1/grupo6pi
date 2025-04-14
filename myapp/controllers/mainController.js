@@ -6,8 +6,9 @@ const mainController = {
         return res.render('index', {proddd})
     },
     searchResults: function (req, res) {
-        return res.render('searchResults')
-    }
+        const proddd = db.productos
+        return res.render('index', {proddd})
+    },
 }
 
 module.exports = mainController
