@@ -18,12 +18,12 @@ const db = {
                 {
                     usuario: "martugodoy7",
                     texto: "Superó todas mis expectativas. Es rápida, liviana y la calidad de la pantalla es impresionante. Ideal para trabajar, editar videos o simplemente disfrutar contenido en alta definición",
-                    foto: "",
+                    foto: "/images/users/pfp6.jpeg",
                 },
                 {
                     usuario: "santino11",
                     texto: "Está buenísima. Uso la MacBook Pro para la facu y para editar videos, y anda rapidísimo. La batería dura un montón y se ve re bien.",
-                    foto: "", 
+                    foto: "/images/users/pfp10.jpg", 
                 },
                 {
                     usuario: "maria1205",
@@ -42,12 +42,12 @@ const db = {
                 {
                     usuario: "josefinaa1",
                     texto: "Ideal para el trabajo creativo. El iPad Pro es súper potente, perfecto para edición de fotos, diseño y notas. Ligero pero muy poderoso, es una herramienta que uso todos los días.",
-                    foto: "",
+                    foto: "/images/users/pfp7.jpeg",
                 },
                 {
                     usuario: "jose.cc",
                     texto: "Muy versátil y potente. El iPad Pro me sirve para todo: tomar apuntes, editar, leer, ver series... ¡y la batería dura un montón! Muy contento con la compra.",
-                    foto: "", 
+                    foto: "/images/users/pfp9.jpg", 
                 },
                 {
                     usuario: "ampivv",
@@ -71,12 +71,12 @@ const db = {
                 {
                     usuario: "maria1.1",
                     texto: "Perfecto para productividad y creatividad. Uso el iPhone 16 Pro Max para trabajar en movimiento.",
-                    foto: "", 
+                    foto: "/images/users/pfp8.jpeg", 
                 },
                 {
                     usuario: "maxi1509",
                     texto: "El mejor iPhone que tuve. La batería aguanta todo el día sin problemas.",
-                    foto: "",
+                    foto: "/images/users/pfp5.jpg",
                 }
             ]
         },
@@ -100,7 +100,7 @@ const db = {
                 {
                     usuario: "jose12",
                     texto: "Cómodo, resistente y con un diseño espectacular.",
-                    foto: "",
+                    foto: "/images/users/pfp4.jpg",
                 }
             ]
         },
@@ -114,17 +114,17 @@ const db = {
                 {
                     usuario: "ignacio.p",
                     texto: "Una experiencia increíble. Usar los Apple Vision Pro es como estar dentro de otro mundo. Todo se ve súper real y la calidad de imagen es impresionante.",
-                    foto: "",
+                    foto: "/images/users/pfp1.jpg",
                 },
                 {
-                    usuario: "juanaoller",
+                    usuario: "faze_pedro",
                     texto: "Perfectos para trabajar, jugar o ver contenido como nunca antes.",
-                    foto: "", 
+                    foto: "/images/users/pfp2.jpg", 
                 },
                 {
                     usuario: "miguel00",
                     texto: " Nunca había probado algo tan realista. Los Apple Vision Pro son cómodos e intuitivos",
-                    foto: "",
+                    foto: "/images/users/pfp3.jpg",
                 }
             ]
         },
