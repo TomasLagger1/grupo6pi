@@ -8,7 +8,10 @@ const userController = {
         const nombre = db.usuario.usuario
         const pfp = db.usuario.foto
         const mail = db.usuario.email
-        return res.render('profile', {nombre, pfp, mail})
+
+        const proddd = db.productos
+
+        return res.render('profile', {nombre, pfp, mail, proddd})
     },
     register: function (req, res) {
         return res.render('register')
