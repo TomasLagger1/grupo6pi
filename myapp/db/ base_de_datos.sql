@@ -15,7 +15,7 @@ CREATE TABLE usuarios (
 
 INSERT INTO usuarios (email, contrasenia, documento, nacimiento, foto)
 VALUES
-('briangomez@gmail.com', 'brian1234', '41082865', '2000-12-07', ''),
+('briangomez@gmail.com', 'brian1234', 41082865, '2000-12-07', ''),
 ('laura.mendez@gmail.com', 'laura2024', 38900231, '1995-03-21', ''),
 ('tomasrivero10@gmail.com', 'tommyriver', 40200123, '1998-11-15', ''),
 ('florencia_paz@gmail.com', 'florpaz88', 37455678, '1992-07-08', ''),
