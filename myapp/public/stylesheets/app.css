@@ -194,6 +194,11 @@ hr {
   margin: 20px 0;
 }
 
+.product-box img{
+  width: 250px;
+  height: 250px;
+}
+
 .product-box a {
   display: block;
 }
