@@ -10,6 +10,7 @@ const db = {
 
     productos: [
         {
+            id: 1,
             imagen: "/images/products/macbook-pro.png",
             producto: "MacBook Pro",
             descripcion: "Equipada con el chip M4 de última generación, la MacBook Pro entrega un rendimiento imbatible en procesamiento y gráficos, ideal para profesionales de alta demanda. Su pantalla Liquid Retina XDR proporciona colores vibrantes y detalles ultrafinos, mientras que su construcción en aluminio la hace resistente y liviana para máxima portabilidad.",
@@ -33,6 +34,7 @@ const db = {
         },
 
         {
+            id: 2,
             imagen: "/images/products/ipadpro.png",
             producto: "iPad Pro",
             descripcion: "El iPad Pro con chip M2 ofrece un rendimiento de alto nivel para profesionales creativos. Su pantalla Liquid Retina XDR brinda una calidad de imagen excepcional, ideal para edición de video, diseño 3D y trabajo multitarea. Compatible con Apple Pencil y conectividad 5G, es la herramienta perfecta para crear y trabajar desde cualquier lugar.",
@@ -56,6 +58,7 @@ const db = {
         },
 
         {
+            id: 3,
             imagen: "/images/products/iphone16.png",
             producto: "iPhone 16 Pro Max",
             descripcion: "El iPhone 16 Pro Max combina el nuevo chip A18 Pro con una pantalla Super Retina XDR y una cámara de nivel profesional. Diseñado en titanio, ofrece un rendimiento ultra rápido, autonomía mejorada y capacidades avanzadas de fotografía y video. Es el iPhone más potente y versátil hasta ahora.",
@@ -79,6 +82,7 @@ const db = {
         },
 
         {
+            id: 4,
             imagen: "/images/products/apple-watch-ultra.png",
             producto: "Apple Watch Ultra",
             descripcion: "El Apple Watch Ultra está diseñado para aventuras extremas, con una caja de titanio resistente, GPS de precisión y una batería de larga duración. Ideal para deportistas y exploradores, combina resistencia, tecnología avanzada y funciones de salud y entrenamiento de nivel profesional.",
@@ -102,6 +106,7 @@ const db = {
         },
 
         {
+            id: 5,
             imagen: "/images/products/visionpro.png",
             producto: "Apple Vision Pro",
             descripcion: "Los Apple Vision Pro combinan realidad aumentada y virtual para ofrecer una experiencia inmersiva sin precedentes. Equipados con el chip R1 y pantallas de ultra alta resolución, permiten interactuar con apps, contenido multimedia y entornos digitales de manera intuitiva. Diseñados para transformar la forma en que trabajamos, nos comunicamos y disfrutamos del entretenimiento.",
@@ -125,6 +130,7 @@ const db = {
         },
 
         {
+            id: 6,
             imagen: "/images/products/airpodsmax.png",
             producto: "Airpods Max",
             descripcion: "Los AirPods Max ofrecen una experiencia de audio premium con cancelación activa de ruido, sonido espacial y un diseño de alta gama. Equipados con el chip H1, logran una reproducción de sonido inmersiva y precisa, ideal para música, películas y llamadas. Su estructura en acero inoxidable y almohadillas de espuma viscoelástica aseguran comodidad y calidad durante todo el día.",
@@ -148,6 +154,7 @@ const db = {
         },
 
         {
+            id: 7,
             imagen: "/images/products/homepod.png",
             producto: "HomePod",
             descripcion: "El HomePod combina un diseño compacto con un sonido de alta fidelidad, gracias a su procesamiento avanzado y su tecnología de audio espacial. Integrado con Siri, permite controlar dispositivos inteligentes, reproducir música y gestionar tareas con la voz. Ideal para cualquier ambiente, ofrece una experiencia sonora rica y envolvente.",
@@ -171,6 +178,7 @@ const db = {
         },
 
         {
+            id: 8,
             imagen: "/images/products/airtags.png",
             producto: "Airtags",
             descripcion: "Los AirTags son dispositivos de rastreo compactos diseñados para ayudarte a localizar objetos personales como llaves, mochilas o carteras. Equipados con el chip U1 y tecnología de banda ultraancha, ofrecen localización precisa a través de la app Buscar. Resistentes al agua y con batería de larga duración, son la solución ideal para no perder lo que más importa.",
@@ -194,6 +202,7 @@ const db = {
         },
 
         {
+            id: 9,
             imagen: "/images/products/magic-keyboard.png",
             producto: "Magic Keyboard Folio",
             descripcion: "El Magic Keyboard Folio ofrece una experiencia de escritura cómoda y precisa para el iPad. Con teclas de tamaño completo, trackpad integrado y un diseño desmontable, combina portabilidad y funcionalidad. Ideal para productividad en movimiento, convierte al iPad en una herramienta versátil para trabajo y estudio.",
@@ -217,6 +226,7 @@ const db = {
         },
 
         {
+            id: 10,
             imagen: "/images/products/studio-display.png",
             producto: "Apple Studio Display",
             descripcion: "El Studio Display ofrece una pantalla Retina 5K de 27 pulgadas con colores vibrantes y detalles excepcionales. Diseñado para profesionales creativos, integra una cámara ultra gran angular con Encuadre Centrado, micrófonos de calidad de estudio y un sistema de sonido envolvente. Es el complemento perfecto para cualquier flujo de trabajo exigente.",
