@@ -10,7 +10,7 @@ const db = {
 
     productos: [
         {
-            imagen: "/images/products/macbook-pro.jpg",
+            imagen: "/images/products/macbook-pro.png",
             producto: "MacBook Pro",
             descripcion: "Equipada con el chip M4 de última generación, la MacBook Pro entrega un rendimiento imbatible en procesamiento y gráficos, ideal para profesionales de alta demanda. Su pantalla Liquid Retina XDR proporciona colores vibrantes y detalles ultrafinos, mientras que su construcción en aluminio la hace resistente y liviana para máxima portabilidad.",
             comentarios: [
@@ -56,7 +56,7 @@ const db = {
         },
 
         {
-            imagen: "/images/products/iphone16.jpg",
+            imagen: "/images/products/iphone16.png",
             producto: "iPhone 16 Pro Max",
             descripcion: "El iPhone 16 Pro Max combina el nuevo chip A18 Pro con una pantalla Super Retina XDR y una cámara de nivel profesional. Diseñado en titanio, ofrece un rendimiento ultra rápido, autonomía mejorada y capacidades avanzadas de fotografía y video. Es el iPhone más potente y versátil hasta ahora.",
             comentarios: [
@@ -79,7 +79,7 @@ const db = {
         },
 
         {
-            imagen: "/images/products/apple-watch-ultra.jpg",
+            imagen: "/images/products/apple-watch-ultra.png",
             producto: "Apple Watch Ultra",
             descripcion: "El Apple Watch Ultra está diseñado para aventuras extremas, con una caja de titanio resistente, GPS de precisión y una batería de larga duración. Ideal para deportistas y exploradores, combina resistencia, tecnología avanzada y funciones de salud y entrenamiento de nivel profesional.",
             comentarios: [
@@ -102,7 +102,7 @@ const db = {
         },
 
         {
-            imagen: "/images/products/visionpro.jpg",
+            imagen: "/images/products/visionpro.png",
             producto: "Apple Vision Pro",
             descripcion: "Los Apple Vision Pro combinan realidad aumentada y virtual para ofrecer una experiencia inmersiva sin precedentes. Equipados con el chip R1 y pantallas de ultra alta resolución, permiten interactuar con apps, contenido multimedia y entornos digitales de manera intuitiva. Diseñados para transformar la forma en que trabajamos, nos comunicamos y disfrutamos del entretenimiento.",
             comentarios: [
@@ -148,7 +148,7 @@ const db = {
         },
 
         {
-            imagen: "/images/products/homepod.jpg",
+            imagen: "/images/products/homepod.png",
             producto: "HomePod",
             descripcion: "El HomePod combina un diseño compacto con un sonido de alta fidelidad, gracias a su procesamiento avanzado y su tecnología de audio espacial. Integrado con Siri, permite controlar dispositivos inteligentes, reproducir música y gestionar tareas con la voz. Ideal para cualquier ambiente, ofrece una experiencia sonora rica y envolvente.",
             comentarios: [
@@ -171,7 +171,7 @@ const db = {
         },
 
         {
-            imagen: "/images/products/airtags.jpg",
+            imagen: "/images/products/airtags.png",
             producto: "Airtags",
             descripcion: "Los AirTags son dispositivos de rastreo compactos diseñados para ayudarte a localizar objetos personales como llaves, mochilas o carteras. Equipados con el chip U1 y tecnología de banda ultraancha, ofrecen localización precisa a través de la app Buscar. Resistentes al agua y con batería de larga duración, son la solución ideal para no perder lo que más importa.",
             comentarios: [
@@ -194,7 +194,7 @@ const db = {
         },
 
         {
-            imagen: "/images/products/magic-keyboard.jpg",
+            imagen: "/images/products/magic-keyboard.png",
             producto: "Magic Keyboard Folio",
             descripcion: "El Magic Keyboard Folio ofrece una experiencia de escritura cómoda y precisa para el iPad. Con teclas de tamaño completo, trackpad integrado y un diseño desmontable, combina portabilidad y funcionalidad. Ideal para productividad en movimiento, convierte al iPad en una herramienta versátil para trabajo y estudio.",
             comentarios: [
