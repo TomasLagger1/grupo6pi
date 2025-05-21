@@ -31,8 +31,8 @@ module.exports = function (sequelize, dataTypes){
         underscored: true,
     };
 
-    const User = sequelize.define(alias, cols, config);
+    const Usuario = sequelize.define(alias, cols, config);
 
-    return User;
+    return Usuario;
 
 }

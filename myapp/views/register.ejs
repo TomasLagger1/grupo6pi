@@ -17,13 +17,13 @@
 			<!-- Show the "ultimos" products -->
 			<h2 class="col-12"> 
 		<main class="register">
-			<form id="registerForm" action="login" method="GET">
-				<input type="email" placeholder="Email:" required>
-				<input type="texto" placeholder="Nombre de usuario:" required>
-				<input type="contraseña" placeholder="Contraseña:" required>
-				<input type="fecha" placeholder="Fecha de nacimiento:" required>
-				<input type="numerico" placeholder="Documento:" required>
-				<input type="texto" placeholder="Foto de perfil:" required>
+			<form id="registerForm" action="/users/newuser" method="POST">
+				<input type="email" name="email" placeholder="Email:" required>
+				<input type="text" name="name" placeholder="Nombre de usuario:" required>
+				<input type="password" name="password" placeholder="Contraseña:" required>
+				<input type="date" name="date" placeholder="Fecha de nacimiento:" required>
+				<input type="number" name="dni" placeholder="Documento:" required>
+				<input type="text" name="foto" placeholder="Foto de perfil:" required>
 				<button type="submit"> Registrarse </button>
 			</form>
 		</main>
