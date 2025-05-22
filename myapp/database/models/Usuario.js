@@ -9,7 +9,8 @@ module.exports = function (sequelize, dataTypes){
             type: dataTypes.INTEGER
         },
         email: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            unique: true
         },
         contrasenia: {
             type: dataTypes.STRING
@@ -28,7 +29,7 @@ module.exports = function (sequelize, dataTypes){
     let config = {
         tableName : "usuarios",
         timestamps: true,
-        underscored: true,
+        underscored: false,
     };
 
     const Usuario = sequelize.define(alias, cols, config);
