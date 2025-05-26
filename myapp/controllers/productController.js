@@ -2,7 +2,7 @@ const db = require('../database/models')
 
 const productController = {
     product: function (req, res) {
-        return res.render('product', {productos: db.productos})
+        return res.render('product', {productos: db.Producto})
     },
     productAdd: function (req, res) {
         const nombre = db.usuario.usuario
@@ -13,19 +13,31 @@ const productController = {
     detalle: function (req, res) {
         const idEncontrado = req.params.id;
       
-        const producto = []
-        for (let i = 0; i < db.productos.length; i++) {
-            const element = db.productos[i];
+        // const producto = []
+        // for (let i = 0; i < db.Producto.length; i++) {
+        //     const element = db.Producto[i];
 
-            if (element.id == idEncontrado) {
-                producto.push(element)
+        //     if (element.id == idEncontrado) {
+        //         producto.push(element)
                 
                 
-            }
+        //     }
             
-        }  
+        // }
+        let idprod = req.params.id;
+
+        db.Producto.findByPk(idprod, {
+            include : [
+                {association : "comentarios"},
+                {association : "usuario"}
+            ]
+        })
+        .then(function(producto){
+            //return res.send(producto)
+            return res.render("product", {producto : producto})
+        })
         
-        return res.render('product', {productos: producto})      
+        // return res.render('product', {productos: producto})      
         
     }
 }
