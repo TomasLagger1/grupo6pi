@@ -10,9 +10,9 @@ const mainController = {
         return res.render('index', {proddd})
     },
     searchResults: function (req, res) {
-        const proddd = db.productos
+       
         /* return res.render('searchResults', {proddd}) */
-
+        
         db.Producto.findAll({
             where: [
                 {nombre: { [op.like]: `%${req.query.search}%`} }
