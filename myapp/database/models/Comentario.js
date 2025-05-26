@@ -8,10 +8,10 @@ module.exports = function (sequelize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        usuario_id: {
+        usuarioId: {
             type: dataTypes.INTEGER
         },
-        producto_id: {
+        productoId: {
             type: dataTypes.INTEGER
         },
         comentario: {
@@ -30,7 +30,7 @@ module.exports = function (sequelize, dataTypes){
     Comentario.associate = function (models) {
         Comentario.belongsTo(models.Usuario, {
             as: "usuario",
-            foreignKey: "usuario_id"
+            foreignKey: "usuarioId"
         });
         
     }
