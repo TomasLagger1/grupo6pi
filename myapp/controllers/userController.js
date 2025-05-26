@@ -1,4 +1,3 @@
-const db1 = require('../db/datos')
 
 const db = require('../database/models')
 

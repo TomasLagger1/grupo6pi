@@ -10,7 +10,7 @@ module.exports = function (sequelize, dataTypes){
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        usuario_id: {
+        usuarioId: {
             type: dataTypes.INTEGER,
         },
         imagen: {
@@ -32,7 +32,13 @@ module.exports = function (sequelize, dataTypes){
 
     const Producto = sequelize.define(alias, cols, config);
 
-   
+    Producto.associate = function (models) {
+        Producto.belongsTo(models.Usuario, {
+            as: "usuario",
+            foreignkey: "usuario_id"
+        });
+        
+    };
 
     return Producto;
 

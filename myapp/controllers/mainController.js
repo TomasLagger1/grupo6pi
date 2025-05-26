@@ -1,18 +1,22 @@
-const db1 = require("../db/datos");
-
 const db = require('../database/models')
 
 const op = db.Sequelize.Op
 
 const mainController = {
     index: function (req, res) {
-        const proddd = db1.productos
-        return res.render('index', {proddd})
-    },
-    searchResults: function (req, res) {
-       
-        /* return res.render('searchResults', {proddd}) */
+        db.Producto.findAll()
+        .then(function(productos) {
+            return res.render("index", {productos: productos})
+        })
         
+            .catch( function (error) {
+                console.log(error)
+                return res.send(error)
+            })
+        },
+
+    searchResults: function (req, res) {
+               
         db.Producto.findAll({
             where: [
                 {nombre: { [op.like]: `%${req.query.search}%`} }

@@ -1,4 +1,4 @@
-const db = require('../db/datos')
+const db = require('../database/models')
 
 const productController = {
     product: function (req, res) {
