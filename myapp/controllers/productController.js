@@ -14,8 +14,8 @@ const productController = {
         const idEncontrado = req.params.id;
       
         const producto = []
-        for (let i = 0; i < db.productos.length; i++) {
-            const element = db.productos[i];
+        for (let i = 0; i < db.Producto.length; i++) {
+            const element = db.Producto[i];
 
             if (element.id == idEncontrado) {
                 producto.push(element)
