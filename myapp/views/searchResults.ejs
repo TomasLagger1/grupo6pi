@@ -15,22 +15,27 @@
 			<div class="col-12">
 				<h2 class="products-title">Resultados de búsqueda</h2>
 			</div>
+
 			<!-- Show the "ultimos" products -->
-			<% for (let i = 0; i < 2; i++) { %>
-				<div id="seeyuh" class="col-12 col-sm-6 col-lg-3">
-					<section class="product-box">
-						<a href="/product">
-							<figure class="product-box_image">
-								<img src="<%= proddd[i].imagen %>" alt=""> 
-							</figure> 
-							<article class="product-box_data"> 
-								<h2><%= proddd[i].producto %></h2> 
-								<p><%= proddd[i].descripcion %></p> 
-								<p>Comentarios: 12</p> 
-							</article>
-						</a>
-					</section> 
-				</div>
+			<% if (productos.length > 0) { %>
+				<% for (let i = 0; i < productos.length; i++) { %>
+					<div id="seeyuh" class="col-12 col-sm-6 col-lg-3">
+						<section class="product-box">
+							<a href="/product/detalle/<%= productos[i].id %>">
+								<figure class="product-box_image">
+									<img src="<%= productos[i].imagen %>" alt=""> 
+								</figure> 
+								<article class="product-box_data"> 
+									<h2><%= productos[i].nombre %></h2> 
+									<p><%= productos[i].descripcion %></p> 
+									<p>Comentarios: 12</p> 
+								</article>
+							</a>
+						</section> 
+					</div>
+				<% } %>
+			<% } else { %>
+				<h2> <%= mensaje %> </h2>
 			<% } %>
 
 

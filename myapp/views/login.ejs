@@ -17,14 +17,18 @@
 			<!-- Show the "ultimos" products -->
 			<h2 class="col-12">
 
-			<form action="/" method="GET">
-				<input type="email" placeholder="Email:" required>
-				<input type="contraseña" placeholder="Contraseña:" required>
-				<label> Recordame </label>
-				<input type="checkbox">
+		<% if (error) { %>
+			<%= error %>
+		<% } %>
+		
+		<main class="login">
+			<form class="loginForm" action="/users/processLogin" method="POST">
+				<input type="email" name="email" placeholder="Email:" required>
+				<input type="password" name="password" placeholder="Contraseña:" required>
+				<label for="remember"> Recordame <input type="checkbox" id="remember" name="remember"> </label>
 				<button type="submit"> Ingresar </button>
 			</form>
-			
+		</main>
 			</h2>
 
 
