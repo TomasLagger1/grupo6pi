@@ -28,7 +28,7 @@ const productController = {
 
         db.Producto.findByPk(idprod, {
             include : [
-                {association : "comentarios"},
+                {association : "comentarios", include: [{association: "usuario"}]},
                 {association : "usuario"}
             ]
         })

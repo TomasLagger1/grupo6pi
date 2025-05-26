@@ -6,6 +6,7 @@ const mainController = {
     index: function (req, res) {
         db.Producto.findAll()
         .then(function(productos) {
+            //datos
             return res.render("index", {proddd: productos})
         })
         
