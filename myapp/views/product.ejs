@@ -29,11 +29,11 @@
 							%>
 							
 							<article>
-								<img src="<%= comentario.foto %>" alt="">
+								<img src="<%= comentario.usuario.foto %>" alt="">
 								<div class="data">
 									<p class="user">
-										<strong> <a href="profile"> <%= comentario.usuario %> </a> </strong>
-										<%= comentario.texto %></p>
+										<strong> <a href="profile"> <%= comentario.usuario.nombre %> </a> </strong>
+										<%= comentario.comentario %></p>
 								</div>
 							</article>
 

@@ -15,6 +15,9 @@ module.exports = function (sequelize, dataTypes){
         contrasenia: {
             type: dataTypes.STRING
         },
+        nombre: {
+            type: dataTypes.STRING
+        },
         documento: {
             type: dataTypes.INTEGER
         },
