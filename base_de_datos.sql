@@ -5,6 +5,7 @@ CREATE TABLE usuarios (
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 	email VARCHAR(250) NOT NULL UNIQUE,
 	contrasenia VARCHAR(500) NOT NULL,
+    nombre VARCHAR(250) NOT NULL,
     documento INT NOT NULL,
     nacimiento DATE NOT NULL,
 	foto VARCHAR(300),
@@ -13,13 +14,13 @@ CREATE TABLE usuarios (
 	deletedAt  TIMESTAMP NULL ON UPDATE CURRENT_TIMESTAMP
 );
 
-INSERT INTO usuarios (email, contrasenia, documento, nacimiento, foto)
+INSERT INTO usuarios (email, contrasenia, nombre, documento, nacimiento, foto)
 VALUES
-('briangomez@gmail.com', 'brian1234', 41082865, '2000-12-07', ''),
-('laura.mendez@gmail.com', 'laura2024', 38900231, '1995-03-21', ''),
-('tomasrivero10@gmail.com', 'tommyriver', 40200123, '1998-11-15', ''),
-('florencia_paz@gmail.com', 'florpaz88', 37455678, '1992-07-08', ''),
-('ignaciotorres23@gmail.com', 'nachotorres', 42109876, '2001-01-30', '');
+('briangomez@gmail.com', 'brian1234', 'BGomez', 41082865, '2000-12-07', '/images/users/foto-perfil-b.webp'),
+('laura.mendez@gmail.com', 'laura2024', 'laura_m', 38900231, '1995-03-21', '/images/users/pfp8.jpeg'),
+('tomasrivero10@gmail.com', 'tommyriver', 'Tomi_CARP912', 40200123, '1998-11-15', '/images/users/pfp10.jpg'),
+('florencia_paz@gmail.com', 'florpaz88', 'Florr12', 37455678, '1992-07-08', '/images/users/pfp6.jpeg'),
+('ignaciotorres23@gmail.com', 'nachotorres', 'NachitoTowers', 42109876, '2001-01-30', '/images/users/pfp9.jpg');
 
 CREATE TABLE productos (
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
@@ -100,6 +101,3 @@ VALUES
 (3, 10, "Un monitor de otro nivel. Desde que lo uso, trabajar se siente mucho más fluido. Además, el diseño es increíble."),
 (1, 10, "El brillo, la resolución y el sonido integrado son impresionantes."),
 (4, 10, "Increíble calidad de imagen. El Studio Display tiene colores súper nítidos y una definición espectacular. Ideal para diseño y edición.");
-
-
-
