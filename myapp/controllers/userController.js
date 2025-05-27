@@ -18,13 +18,7 @@ const userController = {
     },
 
     perfil: function (req, res) {
-        const nombre = db1.usuario.usuario
-        const pfp = db1.usuario.foto
-        const mail = db1.usuario.email
-
-        const proddd = db1.productos
-
-        return res.render('profile', {nombre, pfp, mail, proddd})
+        return res.render('profile', {usuario: req.session.user, enIndex: false})
     },
 
     register: function (req, res) {

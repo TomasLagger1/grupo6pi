@@ -63,15 +63,21 @@
 						</li>
 					<% } else { %>
 						<li>Bienvenido: <%= user.email %></li>
-						<li><a href="/users/profile">
-							Mi Perfil <i class="fas fa-user"></i>
-						</a>
-						</li>
+						
+						<% if (enIndex) { %>
+							<li>
+							  <a href="/users/profile">
+								Mi Perfil <i class="fas fa-user"></i>
+							  </a>
+							</li>
+						  <% } %>
+
 						<li>
 							<form action="/users/logout" method="GET">
 								<button type="submit">Logout</button>
 							</form>
 						</li>
+						
 					<% } %>
 
 				</ul>

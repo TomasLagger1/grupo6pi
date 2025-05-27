@@ -12,7 +12,7 @@ const mainController = {
         })
         .then(function(productos) {
             //res.send(productos)
-            return res.render("index", {proddd: productos})
+            return res.render("index", {proddd: productos, enIndex: true})
         })
         
             .catch( function (error) {
