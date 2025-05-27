@@ -500,6 +500,62 @@ header, footer{
   font-family: var(--base-font-family);
 }
 
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.register input, .register button {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.register button {
+  background-color: darkgreen;
+  color: #fff;
+  text-transform: uppercase;
+  border: 1px solid darkgreen;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.login input, .login button {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.login button {
+  background-color: darkgreen;
+  color: #fff;
+  text-transform: uppercase;
+  border: 1px solid darkgreen;
+}
+
+.userFoto {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {
   .main-header_credit-link {
@@ -550,54 +606,4 @@ header, footer{
     width: 95%;
     margin: auto;
   }
-}
-
-.register {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5px;
-}
-
-.register form {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-}
-
-.register input, .register button {
-  padding: 10px;
-  margin: 10px 0;
-}
-
-.register button {
-  background-color: darkgreen;
-  color: #fff;
-  text-transform: uppercase;
-  border: 1px solid darkgreen;
-}
-
-.login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 15px;
-}
-
-.login form {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-}
-
-.login input, .login button {
-  padding: 10px;
-  margin: 10px 0;
-}
-
-.login button {
-  background-color: darkgreen;
-  color: #fff;
-  text-transform: uppercase;
-  border: 1px solid darkgreen;
 }

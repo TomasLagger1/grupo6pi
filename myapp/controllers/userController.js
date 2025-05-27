@@ -18,7 +18,7 @@ const userController = {
     },
 
     perfil: function (req, res) {
-        return res.render('profile', {usuario: req.session.user, enIndex: false})
+        return res.render('profile', {usuario: req.session.user, mostrarPerfil: false})
     },
 
     register: function (req, res) {
@@ -52,7 +52,7 @@ const userController = {
                 nombre: req.body.name,
                 documento: req.body.dni,
                 nacimiento: req.body.date,
-                foto: req.body.foto
+                foto: '/images/users/' + req.body.foto
             })
 
             .then(function(usuarioCreado) {

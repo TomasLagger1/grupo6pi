@@ -62,9 +62,10 @@
 							<a href="/users/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
 						</li>
 					<% } else { %>
-						<li>Bienvenido: <%= user.email %></li>
+						<li>Bienvenido: <%= user.nombre %></li>
+						<li> <img src="<%= user.foto %>" class="userFoto"> </li>
 						
-						<% if (enIndex) { %>
+						<% if (mostrarPerfil) { %>
 							<li>
 							  <a href="/users/profile">
 								Mi Perfil <i class="fas fa-user"></i>
@@ -74,10 +75,10 @@
 
 						<li>
 							<form action="/users/logout" method="GET">
-								<button type="submit">Logout</button>
+								<button type="submit">Cerrar sesión</button>
 							</form>
 						</li>
-						
+
 					<% } %>
 
 				</ul>
