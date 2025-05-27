@@ -1,7 +1,8 @@
-
 const db = require('../database/models')
 
 const bcrypt = require('bcryptjs');
+
+const op = db.Sequelize.Op
 
 const userController = {
     login: function(req, res){
@@ -54,6 +55,7 @@ const userController = {
             db.Usuario.create({
                 email: req.body.email,
                 contrasenia: passEncriptada,
+                nombre: req.body.name,
                 documento: req.body.dni,
                 nacimiento: req.body.date,
                 foto: req.body.foto
@@ -77,8 +79,13 @@ const userController = {
     processLogin: function(req,res){
 
         db.Usuario.findOne({
-            where: [{email: req.body.email}]
-        })
+            where: {
+              [op.or]: [
+                { email: req.body.identificador },
+                { nombre: req.body.identificador }
+              ]
+            }
+          })
 
         .then(function(user) {
             if (user) {
