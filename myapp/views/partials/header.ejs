@@ -80,6 +80,17 @@
 						</li>
 
 					<% } %>
+					<% if (!user) { %>
+						<li>
+							<a href="/users/login">Publicar producto<i class="fas fa-box"></i>
+							</a>
+						</li>
+					<% } else { %>
+						<li>
+							<a href="/product/product-add">Publicar producto<i class="fas fa-box"></i>
+							</a>
+						</li>
+					<% } %>
 
 				</ul>
 			</nav>
