@@ -18,7 +18,15 @@ const userController = {
     },
 
     perfil: function (req, res) {
-        db.Usuario.findByPk(req.session.user.id, {
+        let id = req.params.id
+
+        if (!req.session.user) {
+            return res.redirect("/users/login");
+        } else if (!id) {
+            id = req.session.user.id;
+        }
+
+        db.Usuario.findByPk(id, {
             include: [
                 { association: "productos",
                     include:[{association:"comentarios"}]
@@ -27,7 +35,13 @@ const userController = {
             ]
         })
         .then(function(usuario) {
-            return res.render('profile', { usuario, mostrarPerfil: false });
+            if (!usuario) {
+                res.send("Usuario no encontrado")
+            }
+
+            const esMiPerfil = req.session.user.id === usuario.id
+
+            return res.render('profile', {usuario, mostrarPerfil: false, esMiPerfil});
         })
         .catch(function(error) {
             console.log(error);

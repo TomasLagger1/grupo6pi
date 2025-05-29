@@ -20,7 +20,10 @@
 				<article class="col-12 col-lg-8 product-detail-info">
 					<img src="<%= producto.imagen %>" alt="" class="product-detail-img">
 					<p class="product-detail-description"><%= producto.descripcion %></p>
-					<p class="product-detail-description"> <strong> Vendedor/a: </strong> <%= producto.usuario.nombre %></p>
+					<p class="product-detail-description"> 
+						<strong> Vendedor/a: </strong> 
+						<a href="/users/profile/<%= producto.usuario.id %>"> <%= producto.usuario.nombre %> </a>
+					</p>
 				</article>
 				
 				<div class="col-12 col-lg-4">
