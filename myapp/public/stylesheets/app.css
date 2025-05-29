@@ -280,6 +280,20 @@ hr {
   box-shadow: 0 0 5px var(--green);
 }
 
+.reg-but {
+  font-weight: bolder;
+  font-size: 17.1px;
+}
+
+.unodos{
+  font-weight: bolder;
+  color: darkgreen;
+}
+
+.unodos:hover {
+  color: #171616;
+}
+
 /*====== Footer ======*/
 .main-footer {
   background-color: #171616;
