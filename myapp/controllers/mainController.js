@@ -26,13 +26,17 @@ const mainController = {
         db.Producto.findAll({
             where: [
                 {nombre: { [op.like]: `%${req.query.search}%`} }
+            ],
+            include : [
+                {association : "comentarios"},
+                {association : "usuario"}
             ]
         })
         .then(function(productosEncontrados) {
             if (productosEncontrados.length > 0) {
-                return res.render('searchResults', {productos: productosEncontrados, mensaje: null})
+                return res.render('searchResults', {proddd: productosEncontrados, mensaje: null})
             } else {
-                return res.render('searchResults', {productos: [], mensaje: "No hay resultados para su criterio de búsqueda"})
+                return res.render('searchResults', {proddd: [], mensaje: "No hay resultados para su criterio de búsqueda"})
             }
         })
         .catch(function(error) {
