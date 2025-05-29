@@ -18,7 +18,21 @@ const userController = {
     },
 
     perfil: function (req, res) {
-        return res.render('profile', {usuario: req.session.user, mostrarPerfil: false})
+        db.Usuario.findByPk(req.session.user.id, {
+            include: [
+                { association: "productos",
+                    include:[{association:"comentarios"}]
+
+                }
+            ]
+        })
+        .then(function(usuario) {
+            return res.render('profile', { usuario, mostrarPerfil: false });
+        })
+        .catch(function(error) {
+            console.log(error);
+            return res.send("Error al cargar el perfil");
+        });
     },
 
     register: function (req, res) {
