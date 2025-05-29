@@ -43,6 +43,20 @@ const productController = {
         .catch(function(error) {
             res.send(error);
         });
+    },
+    agregarProducto: function (req, res) {
+        db.Producto.create({
+            usuarioId: req.session.user.id,
+            imagen: '/images/products/' + req.body.imagen,
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion
+        })
+        .then(function(productoCreado) {
+            return res.redirect('/product/detalle/' + productoCreado.id);
+        })
+        .catch(function(error) {
+            return res.send(error);
+        });
     }
 }
 

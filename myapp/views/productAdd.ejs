@@ -6,7 +6,7 @@
 
 <body>
 	<!-- Header -->
-	<%- include('./partials/headerLogueado') %>
+	<%- include('./partials/header') %>
 	<!-- /Header -->
 
 	<!-- Novedades -->
@@ -18,10 +18,11 @@
 			<!-- Show the "ultimos" products -->
 			<h2 class="col-12">
 
-			<form action="" method="GET">
-				<input type="texto" placeholder="Producto:">
-				<input type="texto" placeholder="Nombre del producto:">
-				<input type="texto" placeholder="Descripción">
+			<form action="/product/agregar" method="POST">
+				<input type="texto" name="imagen"placeholder="Imagen:">
+				<input type="texto" name="nombre" placeholder="Nombre del producto:">
+				<input type="texto" name="descripcion" placeholder="Descripción">
+				<button type="submit">Publicar Producto</button>
 			</form>
 
 			</h2>

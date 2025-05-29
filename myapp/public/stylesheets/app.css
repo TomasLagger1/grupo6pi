@@ -47,6 +47,10 @@ a {
   color: inherit;
 }
 
+a i {
+  margin-left: 4px; /* Ajusta el valor para separar el ícono del texto */
+}
+
 figure {
   margin: 0;
   padding: 0;
@@ -187,8 +191,8 @@ hr {
 }
 
 .product-box {
-  background-color: #ffffff;
-  border-radius: 5px;
+  background-color: var(--light-gray);
+  border-radius: 10px;
   overflow: hidden;
   transition: 300ms;
   margin: 20px 0;
@@ -213,7 +217,6 @@ hr {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  border: 3px solid #00bf63;
 }
 
 .product-box_data h2 {
@@ -480,8 +483,11 @@ textarea.form-input {
   font-size: 16px;
 }
 
-.foto-perfil{
+.foto-perfil {
   border-radius: 50%;
+  width: 100px; 
+  height: 100px; 
+  object-fit: cover; 
 }
 
 .main-title{
@@ -595,7 +601,7 @@ header, footer{
   }
 
   .right-navbar li {
-    margin-left: 15px;
+    margin-left: 35px;
   }
 
   .main-footer {
