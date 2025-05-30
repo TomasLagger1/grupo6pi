@@ -43,9 +43,10 @@ const userController = {
 
             if (req.session.user) {
                 esMiPerfil = req.session.user.id === usuario.id;
+                mostrarPerfil = !esMiPerfil
             }
 
-            return res.render('profile', {usuario, mostrarPerfil: false, esMiPerfil});
+            return res.render('profile', {usuario, mostrarPerfil, esMiPerfil});
         })
         .catch(function(error) {
             console.log(error);

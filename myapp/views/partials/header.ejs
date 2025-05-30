@@ -63,7 +63,7 @@
 						</li>
 					<% } else { %>
 						<li>Bienvenido: <%= user.nombre %></li>
-						<li> <img src="<%= user.foto %>" class="userFoto"> </li>
+						<li> <a href="/users/profile"><img src="<%= user.foto %>" class="userFoto"> </a></li>
 						
 						<% if (mostrarPerfil) { %>
 							<li>
