@@ -5,6 +5,11 @@ const productController = {
         return res.render('product', {productos: db.Producto})
     },
     productAdd: function (req, res) {
+
+        if (!req.session.user) {
+            res.redirect('/users/login')
+        }
+
         const nombre = req.session.user.nombre; 
         const pfp = req.session.user.foto; 
         const mail = req.session.user.email; 
@@ -24,7 +29,7 @@ const productController = {
         })
         .then(function(producto){
             //return res.send(producto)
-            return res.render("product", {producto : producto})
+            return res.render("product", {producto : producto, user: req.session.user})
         })
     },
     agregarComentario: function (req,res) {

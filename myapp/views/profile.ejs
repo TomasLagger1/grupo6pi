@@ -19,7 +19,7 @@
 					<h1 class="main-title"> <%= usuario.nombre %>
 
 						<% if (esMiPerfil) { %>
-							<a href="profile-edit">
+							<a href="">
 								<i class="fas fa-cog"></i>
 							</a>
 						<% } else { %>
@@ -30,9 +30,9 @@
 				<div>
 					<ul class="">
 						<li><%= usuario.email %></li>
-						<li><%= usuario.productos.length %> productos</li>
-						<li>200 seguidores</li>
-						<li>300 comentarios</li>
+						<li> Productos publicados: <%= usuario.productos.length %> </li>
+						<li>Seguidores: </li>
+						<li> Comentarios: <%= usuario.comentarios.length %> </li>
 					</ul>
 				</div>
 			</div>
