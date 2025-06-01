@@ -20,6 +20,10 @@
 				<article class="col-12 col-lg-8 product-detail-info">
 					<img src="<%= producto.imagen %>" alt="" class="product-detail-img">
 					<p class="product-detail-description"><%= producto.descripcion %></p>
+					<p class="product-detail-description"> 
+						<strong> Vendedor/a: </strong> 
+						<a href="/users/profile/<%= producto.usuario.id %>"> <%= producto.usuario.nombre %> </a>
+					</p>
 				</article>
 				
 				<div class="col-12 col-lg-4">
@@ -32,7 +36,7 @@
 								<img src="<%= comentario.usuario.foto %>" alt="">
 								<div class="data">
 									<p class="user">
-										<strong> <a href="profile"> <%= comentario.usuario.nombre %> </a> </strong>
+										<strong> <a href="/users/profile/ <%= comentario.usuario.id %> "> <%= comentario.usuario.nombre %> </a> </strong>
 										<%= comentario.comentario %></p>
 								</div>
 							</article>
@@ -40,8 +44,8 @@
 						<% } %>
 
 					</section>
-					<form class="form" action="" method="POST">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+					<form class="form" action="/product/detalle/<%= producto.id %>" method="POST">
+						<input class="form-input" type="text" name="agregarComentario" value="" placeholder="Agregar comentario" required>
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
 					<hr>

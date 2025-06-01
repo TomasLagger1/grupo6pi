@@ -5,25 +5,20 @@ const productController = {
         return res.render('product', {productos: db.Producto})
     },
     productAdd: function (req, res) {
-        const nombre = db.usuario.usuario
-        const pfp = db.usuario.foto
-        const mail = db.usuario.email
-        return res.render('productAdd', {nombre, pfp, mail})
+
+        if (!req.session.user) {
+            res.redirect('/users/login')
+        }
+
+        const nombre = req.session.user.nombre; 
+        const pfp = req.session.user.foto; 
+        const mail = req.session.user.email; 
+
+        return res.render('productAdd', { nombre, pfp, mail });
     },
     detalle: function (req, res) {
         const idEncontrado = req.params.id;
       
-        // const producto = []
-        // for (let i = 0; i < db.Producto.length; i++) {
-        //     const element = db.Producto[i];
-
-        //     if (element.id == idEncontrado) {
-        //         producto.push(element)
-                
-                
-        //     }
-            
-        // }
         let idprod = req.params.id;
 
         db.Producto.findByPk(idprod, {
@@ -34,11 +29,39 @@ const productController = {
         })
         .then(function(producto){
             //return res.send(producto)
-            return res.render("product", {producto : producto})
+            return res.render("product", {producto : producto, user: req.session.user})
         })
-        
-        // return res.render('product', {productos: producto})      
-        
+    },
+    agregarComentario: function (req,res) {
+        if (!req.session.user) {
+            res.redirect('/users/login')
+        }
+
+        db.Comentario.create({
+            usuarioId: req.session.user.id,
+            productoId: req.params.id,
+            comentario: req.body.agregarComentario
+        })
+        .then(function(comentarioAgregado) {
+            res.redirect('/product/detalle/' + req.params.id)
+        })
+        .catch(function(error) {
+            res.send(error);
+        });
+    },
+    agregarProducto: function (req, res) {
+        db.Producto.create({
+            usuarioId: req.session.user.id,
+            imagen: '/images/products/' + req.body.imagen,
+            nombre: req.body.nombre,
+            descripcion: req.body.descripcion
+        })
+        .then(function(productoCreado) {
+            return res.redirect('/product/detalle/' + productoCreado.id);
+        })
+        .catch(function(error) {
+            return res.send(error);
+        });
     }
 }
 

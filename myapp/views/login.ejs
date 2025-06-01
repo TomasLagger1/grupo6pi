@@ -22,11 +22,12 @@
 		<% } %>
 		
 		<main class="login">
-			<form class="loginForm" action="/users/processLogin" method="POST">
-				<input type="email" name="email" placeholder="Email:" required>
+			<form action="/users/processLogin" method="POST">
+				<input type="text" name="identificador" placeholder="Email o Nombre de Usuario:" required>
 				<input type="password" name="password" placeholder="Contraseña:" required>
 				<label for="remember"> Recordame <input type="checkbox" id="remember" name="remember"> </label>
 				<button type="submit"> Ingresar </button>
+				<p class="reg-but">¿No tenés una cuenta? <a class="unodos" href="/users/register"> ¡Registrate!</a></p>
 			</form>
 		</main>
 			</h2>

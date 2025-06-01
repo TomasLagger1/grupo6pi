@@ -1,7 +1,8 @@
-
 const db = require('../database/models')
 
 const bcrypt = require('bcryptjs');
+
+const op = db.Sequelize.Op
 
 const userController = {
     login: function(req, res){
@@ -17,13 +18,40 @@ const userController = {
     },
 
     perfil: function (req, res) {
-        const nombre = db1.usuario.usuario
-        const pfp = db1.usuario.foto
-        const mail = db1.usuario.email
+        let id = req.params.id
 
-        const proddd = db1.productos
+        if (!id) {
+            if (req.session.user) {
+                id = req.session.user.id;
+            } else {
+                return res.redirect("/users/login");
+            }
+        }
 
-        return res.render('profile', {nombre, pfp, mail, proddd})
+        db.Usuario.findByPk(id, {
+            include : [
+                {association: "productos", include: [{association: "comentarios"}]},
+                {association : "comentarios"}
+            ]
+        })
+        .then(function(usuario) {
+            if (!usuario) {
+                res.send("Usuario no encontrado")
+            }
+
+            let esMiPerfil = false
+
+            if (req.session.user) {
+                esMiPerfil = req.session.user.id === usuario.id;
+                mostrarPerfil = !esMiPerfil
+            }
+
+            return res.render('profile', {usuario, mostrarPerfil, esMiPerfil});
+        })
+        .catch(function(error) {
+            console.log(error);
+            return res.send("Error al cargar el perfil");
+        });
     },
 
     register: function (req, res) {
@@ -54,9 +82,10 @@ const userController = {
             db.Usuario.create({
                 email: req.body.email,
                 contrasenia: passEncriptada,
+                nombre: req.body.name,
                 documento: req.body.dni,
                 nacimiento: req.body.date,
-                foto: req.body.foto
+                foto: '/images/users/' + req.body.foto
             })
 
             .then(function(usuarioCreado) {
@@ -77,8 +106,13 @@ const userController = {
     processLogin: function(req,res){
 
         db.Usuario.findOne({
-            where: [{email: req.body.email}]
-        })
+            where: {
+              [op.or]: [
+                { email: req.body.identificador },
+                { nombre: req.body.identificador }
+              ]
+            }
+          })
 
         .then(function(user) {
             if (user) {
