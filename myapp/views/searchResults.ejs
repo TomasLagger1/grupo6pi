@@ -13,26 +13,30 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Productos</h2>
+				<h2 class="products-title"> Resultados de búsqueda </h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<% for (let i = 0; i < proddd.length; i++) { %> 
+		<% if (productos.length > 0) { %>
+			<% for (let i = 0; i < productos.length; i++) { %> 
 				<div id="seeyuh" class="col-12 col-sm-6 col-lg-3"> 
 					<section class="product-box"> 
-						<a href='/product/detalle/<%= proddd[i].id %>'> 
+						<a href='/product/detalle/<%= productos[i].id %>'> 
 							<figure class="product-box_image"> 
-								<img src="<%= proddd[i].imagen %>" alt=""> 
+								<img src="<%= productos[i].imagen %>" alt=""> 
 							</figure> 
 							<article class="product-box_data"> 
-								<h2><%= proddd[i].nombre %></h2> 
-								<p><%= proddd[i].descripcion %></p> 
-								<p> <strong> Vendedor: </strong> <%= proddd[i].usuario.nombre %></p>
-								<p> <strong> Comentarios: </strong> <%= proddd[i].comentarios.length %></p> 
+								<h2><%= productos[i].nombre %></h2> 
+								<p><%= productos[i].descripcion %></p> 
+								<p> <strong> Vendedor: </strong> <a href="/users/profile/ <%= productos[i].usuario.id %> "> <%= productos[i].usuario.nombre %></p> </a>
+								<p> <strong> Comentarios: </strong> <%= productos[i].comentarios.length %></p> 
 							</article>
 						</a> 
 					</section> 
 				</div> 
-			<% } %> 
+				<% } %>
+			<% } else { %> 
+				<h2> <%= mensaje %> </h2>
+			<% } %>
 		</div>
 	</div>
 

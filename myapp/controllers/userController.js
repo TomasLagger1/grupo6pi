@@ -18,6 +18,11 @@ const userController = {
     },
 
     perfil: function (req, res) {
+
+        if (!req.session.user) {
+            return res.redirect("/users/login");
+        }
+        
         let id = req.params.id
 
         if (!id) {

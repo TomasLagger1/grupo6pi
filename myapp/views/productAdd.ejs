@@ -1,8 +1,8 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
 <%- include('./partials/head') %>
-
 
 <body>
 	<!-- Header -->
@@ -20,9 +20,9 @@
 
 		<main class="productAdd">		
 			<form action="/product/agregar" method="POST">
-				<input type="texto" name="imagen"placeholder="Imagen:">
+				<input type="texto" name="imagen"placeholder="Nombre del archivo (ej: producto1.jpg):">
 				<input type="texto" name="nombre" placeholder="Nombre del producto:">
-				<input type="texto" name="descripcion" placeholder="Descripción">
+				<input type="texto" name="descripcion" placeholder="Descripción:">
 				<button type="submit">Publicar Producto</button>
 			</form>
 		</main>
