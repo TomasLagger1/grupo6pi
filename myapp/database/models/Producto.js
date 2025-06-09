@@ -1,5 +1,3 @@
-const { FOREIGNKEYS } = require("sequelize/lib/query-types");
-
 module.exports = function (sequelize, dataTypes){
 
     let alias = 'Producto'; 
